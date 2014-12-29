@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rGi-of-GYF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,185 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-vB-unK">
+                                <rect key="frame" x="550" y="30" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TkA-ca-mYg"/>
+                                    <constraint firstAttribute="width" constant="44" id="U0C-vQ-H1g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jkz-MD-cCI" kind="show" identifier="PushSegue" id="trn-MQ-KPE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aim_v5" translatesAutoresizingMaskIntoConstraints="NO" id="8p1-WD-is7">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="ONu-hr-MGE"/>
+                                    <constraint firstAttribute="height" constant="128" id="rre-7H-5JU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpM-MI-05t">
+                                <rect key="frame" x="278" y="278" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WfK-Il-V6X"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="rUO-00-EiS"/>
+                                    <constraint firstAttribute="width" constant="44" id="xWr-UN-3dP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="y6t-cm-C9P"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jkz-MD-cCI" kind="show" id="LCN-zq-gsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8p1-WD-is7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="216" id="Bm3-ya-20v"/>
+                            <constraint firstItem="8p1-WD-is7" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Jnj-5b-UpM"/>
+                            <constraint firstAttribute="centerY" secondItem="YpM-MI-05t" secondAttribute="centerY" id="KAz-hl-dpM"/>
+                            <constraint firstItem="6KJ-vB-unK" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="10" id="Lqn-94-oG4"/>
+                            <constraint firstAttribute="centerX" secondItem="YpM-MI-05t" secondAttribute="centerX" id="Vab-S6-ezs"/>
+                            <constraint firstItem="6KJ-vB-unK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="XyN-pL-zM1"/>
+                            <constraint firstItem="8p1-WD-is7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uCQ-W2-VTd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6KJ-vB-unK"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bm3-ya-20v"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="VU9-ib-BmY"/>
+                    <connections>
+                        <outlet property="button" destination="YpM-MI-05t" id="15H-hn-gaS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tdK-sP-S3f">
+            <objects>
+                <viewController id="jkz-MD-cCI" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GZ6-lT-5Ss"/>
+                        <viewControllerLayoutGuide type="bottom" id="g2s-WS-hcM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxe-ZI-9Dk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s8-fc-Tns">
+                                <rect key="frame" x="550" y="30" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="nsA-rn-84t"/>
+                                    <constraint firstAttribute="height" constant="44" id="qsh-cV-O3C"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pop:" destination="jkz-MD-cCI" eventType="touchUpInside" id="vd1-H8-23o"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aim_v6" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-iL-tkG">
+                                <rect key="frame" x="236" y="236" width="128" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="3Zv-sc-rbF"/>
+                                    <constraint firstAttribute="height" constant="128" id="yVd-fE-mrG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTi-XB-rob">
+                                <rect key="frame" x="278" y="278" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="JPX-AY-l6y"/>
+                                    <constraint firstAttribute="width" constant="44" id="ONB-Vd-MIu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="VGQ-xX-VLT"/>
+                                    <constraint firstAttribute="height" constant="44" id="zBf-HY-QLw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pop:" destination="jkz-MD-cCI" eventType="touchUpInside" id="nci-jC-HgT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9s8-fc-Tns" firstAttribute="trailing" secondItem="fxe-ZI-9Dk" secondAttribute="trailingMargin" constant="10" id="19U-zY-I5M"/>
+                            <constraint firstItem="6Ob-iL-tkG" firstAttribute="top" secondItem="GZ6-lT-5Ss" secondAttribute="bottom" constant="216" id="A00-gv-D6g"/>
+                            <constraint firstItem="6Ob-iL-tkG" firstAttribute="centerX" secondItem="fxe-ZI-9Dk" secondAttribute="centerX" id="GGK-5R-0Fp"/>
+                            <constraint firstAttribute="centerX" secondItem="gTi-XB-rob" secondAttribute="centerX" id="PE0-uf-Mza"/>
+                            <constraint firstItem="9s8-fc-Tns" firstAttribute="top" secondItem="GZ6-lT-5Ss" secondAttribute="bottom" constant="10" id="ZQv-d4-3nZ"/>
+                            <constraint firstAttribute="centerY" secondItem="gTi-XB-rob" secondAttribute="centerY" id="m7k-sz-sNn"/>
+                            <constraint firstItem="6Ob-iL-tkG" firstAttribute="centerY" secondItem="fxe-ZI-9Dk" secondAttribute="centerY" id="mTl-Sz-RR5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gTi-XB-rob"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A00-gv-D6g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="9s8-fc-Tns" id="i9s-bx-VcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zz2-ie-jAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7vx-9k-798">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rGi-of-GYF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D7w-z0-nIS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="delegate" destination="YtE-lg-tsN" id="aUX-O8-PVv"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="4jt-6P-S6v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGF-Zm-sJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="YtE-lg-tsN" customClass="NavigationControllerDelegate"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="1048"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aim_v5" width="256" height="256"/>
+        <image name="aim_v6" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="trn-MQ-KPE"/>
+    </inferredMetricsTieBreakers>
 </document>

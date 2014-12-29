@@ -14,6 +14,8 @@
 		58C4DAB21A51BFF200714A74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C4DAB11A51BFF200714A74 /* Images.xcassets */; };
 		58C4DAB51A51BFF200714A74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C4DAB31A51BFF200714A74 /* LaunchScreen.xib */; };
 		58C4DAC11A51BFF200714A74 /* TransitionLayerMaskExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4DAC01A51BFF200714A74 /* TransitionLayerMaskExampleTests.m */; };
+		58C4DAD01A51C70800714A74 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4DACF1A51C70800714A74 /* NavigationControllerDelegate.m */; };
+		58C4DAD31A51C8B800714A74 /* CircleTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C4DAD21A51C8B800714A74 /* CircleTransitionAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		58C4DABA1A51BFF200714A74 /* TransitionLayerMaskExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionLayerMaskExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C4DABF1A51BFF200714A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58C4DAC01A51BFF200714A74 /* TransitionLayerMaskExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionLayerMaskExampleTests.m; sourceTree = "<group>"; };
+		58C4DACE1A51C70800714A74 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		58C4DACF1A51C70800714A74 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		58C4DAD11A51C8B800714A74 /* CircleTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTransitionAnimator.h; sourceTree = "<group>"; };
+		58C4DAD21A51C8B800714A74 /* CircleTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTransitionAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				58C4DAB11A51BFF200714A74 /* Images.xcassets */,
 				58C4DAB31A51BFF200714A74 /* LaunchScreen.xib */,
 				58C4DAA41A51BFF200714A74 /* Supporting Files */,
+				58C4DACE1A51C70800714A74 /* NavigationControllerDelegate.h */,
+				58C4DACF1A51C70800714A74 /* NavigationControllerDelegate.m */,
+				58C4DAD11A51C8B800714A74 /* CircleTransitionAnimator.h */,
+				58C4DAD21A51C8B800714A74 /* CircleTransitionAnimator.m */,
 			);
 			path = TransitionLayerMaskExample;
 			sourceTree = "<group>";
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C4DAD01A51C70800714A74 /* NavigationControllerDelegate.m in Sources */,
 				58C4DAAD1A51BFF200714A74 /* ViewController.m in Sources */,
 				58C4DAAA1A51BFF200714A74 /* AppDelegate.m in Sources */,
 				58C4DAA71A51BFF200714A74 /* main.m in Sources */,
+				58C4DAD31A51C8B800714A74 /* CircleTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +312,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.0;
 			};
 			name = Debug;
 		};
@@ -334,7 +346,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -344,8 +356,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TransitionLayerMaskExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -354,8 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TransitionLayerMaskExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

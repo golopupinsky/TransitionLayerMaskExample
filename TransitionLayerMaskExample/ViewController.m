@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -24,4 +23,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(IBAction)pop:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
