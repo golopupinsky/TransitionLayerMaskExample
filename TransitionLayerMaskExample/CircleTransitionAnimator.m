@@ -18,7 +18,7 @@
 
 -(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 1;
+    return .5;
 }
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -50,11 +50,6 @@
     maskAnimation.delegate = self;
     [mask addAnimation:maskAnimation forKey:@"path"];
 }
-
-//- (void)animationEnded:(BOOL) transitionCompleted;
-//{
-//    [self.transitionContext completeTransition:YES];
-//}
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
